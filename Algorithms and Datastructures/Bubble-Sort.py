@@ -1,3 +1,15 @@
+#Official
+def bubble_sort(array: list) -> list:
+    for e in range(len(array)):
+        for i in range(len(array)-e-1):
+            if array[i] > array[i+1]:
+                array[i], array[i+1] = array[i+1], array[i]
+            print(i, array) #Understanding
+    return array
+
+bubble_sort([4, 6, 2, 5, 6, 9, 1])
+
+#Self-Training
 import random
 from typing import Union
 
