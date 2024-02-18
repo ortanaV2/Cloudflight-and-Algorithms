@@ -1,9 +1,15 @@
 def prime_check(num: int) -> bool:
-    if num <= 1: return False
-    else: 
-        for i in range(2, num): 
-            if num%i == 0: 
-                return False
+    if num <= 1:
+        return False
+    elif num <= 3:
+        return True
+    elif num % 2 == 0 or num % 3 == 0:
+        return False
+    i = 5
+    while i * i <= num:
+        if num % i == 0 or num % (i + 2) == 0:
+            return False
+        i += 6
     return True
 
 def separate(num: int) -> list[str]: return list(str(num))
